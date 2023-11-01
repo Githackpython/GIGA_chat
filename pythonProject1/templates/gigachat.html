@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<div class='chat'>
+	<div class='chat-messages'>
+		<div class='chat-messages__content' id='messages'>
+			{% for i in message  %}
+			<p>
+				{{i}}
+			</p>
+
+			{% endfor %}
+		</div>
+	</div>
+	<div class='chat-input'>
+		<form method='post' id='chat-form'>
+			<input name="message-text"  type='text' class='chat-form__input' placeholder='Введите сообщение'> <input type='submit' class='chat-form__submit' value='=>'>
+		</form>
+	</div>
+</div>
+</body>
+</html>
